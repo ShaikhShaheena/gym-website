@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IronPulse Gym</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cursor"></div>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="#" class="logo">IRON<span>PULSE</span></a>
+    <button class="menu-btn" id="menuBtn">☰</button>
+    <nav id="navLinks">
+      <a href="#programs">Programs</a>
+      <a href="#trainers">Trainers</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#bmi">BMI</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <h1>Build Your <span>Strongest</span> Self</h1>
+      <p>Expert trainers, modern equipment and programs for every level.</p>
+      <a href="#pricing" class="btn">Join Now</a>
+    </div>
+  </section>
+
+  <!-- PROGRAMS -->
+  <section id="programs" class="section">
+    <h2 class="title">Our <span>Programs</span></h2>
+    <div class="grid">
+      <div class="card"><div class="icon">🏋️</div><h3>Strength</h3><p>Build muscle and power with guided weight training.</p></div>
+      <div class="card"><div class="icon">🔥</div><h3>HIIT</h3><p>Burn fat fast with high-intensity interval workouts.</p></div>
+      <div class="card"><div class="icon">🧘</div><h3>Yoga</h3><p>Improve flexibility, balance and focus.</p></div>
+      <div class="card"><div class="icon">🥊</div><h3>Boxing</h3><p>Cardio and skills training in one session.</p></div>
+    </div>
+  </section>
+
+  <!-- TRAINERS -->
+  <section id="trainers" class="section">
+    <h2 class="title">Our <span>Trainers</span></h2>
+    <div class="grid">
+      <div class="card trainer">
+        <div class="img-box"><img src="images/trainer1.jpg" alt="Trainer"><div class="overlay"><p>10+ years experience</p><p>Powerlifting • Muscle gain</p></div></div>
+        <h3>Omar Khalid</h3><p class="role">Strength Coach</p>
+      </div>
+      <div class="card trainer">
+        <div class="img-box"><img src="images/trainer2.jpg" alt="Trainer"><div class="overlay"><p>8 years experience</p><p>Flexibility • Mindfulness</p></div></div>
+        <h3>Sara Ahmed</h3><p class="role">Yoga Instructor</p>
+      </div>
+      <div class="card trainer">
+        <div class="img-box"><img src="images/trainer3.jpg" alt="Trainer"><div class="overlay"><p>Former pro fighter</p><p>Boxing • Cardio</p></div></div>
+        <h3>Ryan Lee</h3><p class="role">Boxing Coach</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="section">
+    <h2 class="title">Pricing <span>Plans</span></h2>
+    <div class="toggle">
+      Monthly
+      <label class="switch"><input type="checkbox" id="priceToggle"><span class="slider"></span></label>
+      Yearly
+    </div>
+    <div class="grid">
+      <div class="card plan">
+        <h3>Basic</h3>
+        <h4 class="price" data-monthly="99" data-yearly="990">AED 99</h4><small class="period">/month</small>
+        <ul><li>Gym access</li><li>Locker room</li><li>1 class per week</li></ul>
+        <a href="#contact" class="btn">Choose</a>
+      </div>
+      <div class="card plan popular">
+        <h3>Pro</h3>
+        <h4 class="price" data-monthly="199" data-yearly="1990">AED 199</h4><small class="period">/month</small>
+        <ul><li>Gym access</li><li>Unlimited classes</li><li>Diet plan</li></ul>
+        <a href="#contact" class="btn">Choose</a>
+      </div>
+      <div class="card plan">
+        <h3>Elite</h3>
+        <h4 class="price" data-monthly="349" data-yearly="3490">AED 349</h4><small class="period">/month</small>
+        <ul><li>Everything in Pro</li><li>Personal trainer</li><li>Sauna access</li></ul>
+        <a href="#contact" class="btn">Choose</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BMI -->
+  <section id="bmi" class="section">
+    <h2 class="title">BMI <span>Calculator</span></h2>
+    <div class="two-col">
+      <div class="card">
+        <input type="number" id="height" placeholder="Height (cm)">
+        <input type="number" id="weight" placeholder="Weight (kg)">
+        <button class="btn" id="bmiBtn">Calculate</button>
+        <p id="bmiResult"></p>
+      </div>
+      <table>
+        <tr><th>BMI</th><th>Status</th></tr>
+        <tr><td>Below 18.5</td><td>Underweight</td></tr>
+        <tr><td>18.5 – 24.9</td><td>Normal</td></tr>
+        <tr><td>25 – 29.9</td><td>Overweight</td></tr>
+        <tr><td>30 and above</td><td>Obese</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- SCHEDULE -->
+  <section id="schedule" class="section">
+    <h2 class="title">Class <span>Schedule</span></h2>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Day</th><th>Morning</th><th>Afternoon</th><th>Evening</th></tr>
+        <tr data-day="Monday"><td>Monday</td><td>Yoga</td><td>Strength</td><td>HIIT</td></tr>
+        <tr data-day="Tuesday"><td>Tuesday</td><td>HIIT</td><td>Boxing</td><td>Strength</td></tr>
+        <tr data-day="Wednesday"><td>Wednesday</td><td>Strength</td><td>Yoga</td><td>Boxing</td></tr>
+        <tr data-day="Thursday"><td>Thursday</td><td>Boxing</td><td>HIIT</td><td>Yoga</td></tr>
+        <tr data-day="Friday"><td>Friday</td><td>Yoga</td><td>Strength</td><td>HIIT</td></tr>
+        <tr data-day="Saturday"><td>Saturday</td><td>HIIT</td><td>Boxing</td><td>Rest</td></tr>
+        <tr data-day="Sunday"><td>Sunday</td><td>Rest</td><td>Yoga</td><td>Strength</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <h2 class="title">Contact <span>Us</span></h2>
+    <div class="two-col">
+      <div>
+        <h3>Visit Us</h3>
+        <p>📍 Abu Dhabi, UAE</p>
+        <p>📞 +971 50 000 0000</p>
+        <p>✉️ info@ironpulse.com</p>
+        <p>🕒 6:00 AM – 11:00 PM</p>
+      </div>
+      <form id="contactForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="4" placeholder="Message" required></textarea>
+        <button class="btn" type="submit">Send</button>
+        <p id="formMsg"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer>© 2026 IronPulse Gym. All rights reserved.</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
